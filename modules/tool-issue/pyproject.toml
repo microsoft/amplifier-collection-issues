@@ -3,13 +3,11 @@ name = "amplifier-module-tool-issue"
 version = "0.1.0"
 description = "Issue management tool module for Amplifier"
 requires-python = ">=3.11"
-dependencies = [
-    "amplifier-module-issue-manager",
-]
+dependencies = ["amplifier-module-issue-manager"]
 
 [tool.uv.sources.amplifier-module-issue-manager]
-git = "https://github.com/payneio/payne-amplifier"
-subdirectory = "max_payne_collection/modules/issue-manager"
+git = "https://github.com/microsoft/amplifier-collection-issues"
+subdirectory = "modules/issue-manager"
 branch = "main"
 
 [project.entry-points."amplifier.modules"]
