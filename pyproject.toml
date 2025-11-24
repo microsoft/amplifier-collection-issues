@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "amplifier-collection-issues"
+version = "0.1.1"
+description = "Issue management components"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Paul Payne" }]
+
+[project.entry-points."amplifier.collections"]
+full = "__init__:get_collection_info"
+
+[tool.amplifier.collection]
+author = "Paul Payne"
+capabilities = [
+    "Issue-aware development profile",
+    "Persistent issue tracking with dependency management",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
